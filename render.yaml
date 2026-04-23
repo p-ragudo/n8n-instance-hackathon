@@ -54,16 +54,13 @@ services:
           
       # This dynamically sets the webhook URL using Render's own variable
       - key: WEBHOOK_URL
-        fromService:
-          type: web
-          name: n8n-service
-          property: host
+        value: https://n8n-service-caij.onrender.com/
       
       # It is also best practice to set these for Render's HTTPS setup
       - key: N8N_PROTOCOL
         value: https
-      - key: N8N_PORT
-        value: 10000 # Render's default port for web services
+      - key: PORT
+        value: 5678
 
 databases:
   - name: n8n-db
