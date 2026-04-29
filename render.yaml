@@ -58,6 +58,8 @@ services:
         value: 5678
       - key: WEBHOOK_URL
         value: https://n8n-service-69m5.onrender.com/
+      - key: GENERIC_TIMEZONE
+        value: Asia/Singapore
 
 databases:
   - name: n8n-db
